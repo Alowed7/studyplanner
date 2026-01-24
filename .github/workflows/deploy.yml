@@ -28,6 +28,12 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      # DEBUG: покажет, что реально лежит в dist
+      - run: ls -la dist
+
+      # важно для Pages
+      - uses: actions/configure-pages@v5
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
