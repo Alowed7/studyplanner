@@ -8,9 +8,13 @@ import AboutPage from '../pages/AboutPage.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/dashboard',
     name: 'Dashboard',
     component: DashboardPage
+  },
+  {
+    path: '/',
+    redirect: '/dashboard'
   },
   {
     path: '/subjects',
